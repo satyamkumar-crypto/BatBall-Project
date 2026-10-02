@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Score Counter</title>
+    <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🏏 Cricket Score Counter</h1>
+
+    <h2>Score: <span id="score">0</span></h2>
+    <h3>Wickets: <span id="wickets">0</span></h3>
+
+    <button onclick="addRuns(1)">1 Run</button>
+    <button onclick="addRuns(2)">2 Runs</button>
+    <button onclick="addRuns(3)">3 Runs</button>
+    <button onclick="addRuns(4)">Four</button>
+    <button onclick="addRuns(6)">Six</button>
+    <button onclick="addWicket()">Wicket</button>
+    <button onclick="resetMatch()">Reset</button>
+</div>
+
+<script>
+  
+  let score = 0;
+let wickets = 0;
+
+// Function to add runs
+function addRuns(run) {
+    score += run;
+    document.getElementById("score").innerText = score;
+}
+
+// Function to add wicket
+function addWicket() {
+    if (wickets < 10) {
+        wickets++;
+        document.getElementById("wickets").innerText = wickets;
+    } else {
+        alert("All Out!");
+    }
+}
+
+// Function to reset match
+function resetMatch() {
+    score = 0;
+    wickets = 0;
+
+    document.getElementById("score").innerText = score;
+    document.getElementById("wickets").innerText = wickets;
+}
+
+
+</script>
+
+</body>
+</html>

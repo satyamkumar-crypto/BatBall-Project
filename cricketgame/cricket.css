@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#728fbc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px gray;
+}
+
+button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:green;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
